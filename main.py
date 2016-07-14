@@ -1,3 +1,5 @@
+import math
+
 '''contains shape classes and does fun things with them
 
 shapes:
@@ -80,7 +82,7 @@ class Circle(object):
         self.enemies = enemies
 
     def area(self):
-        return self.edge_length * 3.141592 * radius
+        return math.pi * self.radius * self.radius
 
     def perimeter(self):
         return self.edge_length
@@ -98,17 +100,17 @@ class Circle(object):
 
 
 if __name__ == '__main__':
-    square_tim = Triangle(3, 6, "tim", [], [])
-    print(square_tim.area())
-    print(square_tim.update_edge_length(12))
-    print(square_tim.area())
+    triangle_tim = Triangle(3, 6, "tim", [], [])
+    print(triangle_tim.area())
+    print(triangle_tim.update_edge_length(12))
+    print(triangle_tim.area())
 
     square_marty = Square(5, "marty", [], [])
     print(square_marty.area())
     print(square_marty.update_edge_length(10))
     print(square_marty.area())
 
-    circle_carl = Circle(5, "carl", 10, [], [])
-    print(square_marty.area())
-    print(square_marty.update_edge_length(10))
-    print(square_marty.area())
+    circle_carl = Circle(1, 5,  "carl", [], [])
+    print(circle_carl.area())
+    print(circle_carl.update_edge_length(10))
+    print(circle_carl.area())
