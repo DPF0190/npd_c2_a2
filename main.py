@@ -43,10 +43,72 @@ class Square(object):
     def add_enemy(self, shape_object):
         self.enemies.append(shape_object)
 
+
+class Triangle(object):
+    shape_type = 'Triangle'
+
+    def __init__(self, edge_length, edge_height, name, allies, enemies):
+        self.edge_length = edge_length
+        self.edge_height = edge_height
+        self.name = name
+        self.allies = allies
+        self.enemies = enemies
+
+    def area(self):
+        return self.edge_length * 0.5 * self.edge_height
+
+    def perimeter(self):
+        return self.edge_length * 3
+
+    def update_edge_length(self, new_length):
+        self.edge_length = new_length
+
+    def add_ally(self, shape_object):
+        self.allies.append(shape_object)
+
+    def add_enemy(self, shape_object):
+        self.enemies.append(shape_object)
+
+class Circle(object):
+    shape_type = 'Circle'
+
+    def __init__(self, edge_length, radius, name, allies, enemies):
+        self.edge_length = edge_length
+        self.radius = radius
+        self.name = name
+        self.allies = allies
+        self.enemies = enemies
+
+    def area(self):
+        return self.edge_length * 3.141592 * radius
+
+    def perimeter(self):
+        return self.edge_length
+
+    def update_edge_length(self, new_length):
+        self.edge_length = new_length
+
+    def add_ally(self, shape_object):
+        self.allies.append(shape_object)
+
+    def add_enemy(self, shape_object):
+        self.enemies.append(shape_object)
+
+
+
+
 if __name__ == '__main__':
+    square_tim = Triangle(3, 6, "tim", [], [])
+    print(square_tim.area())
+    print(square_tim.update_edge_length(12))
+    print(square_tim.area())
+
     square_marty = Square(5, "marty", [], [])
     print(square_marty.area())
     print(square_marty.update_edge_length(10))
     print(square_marty.area())
 
-
+    circle_carl = Circle(5, "carl", 10, [], [])
+    print(square_marty.area())
+    print(square_marty.update_edge_length(10))
+    print(square_marty.area())
