@@ -107,6 +107,7 @@ class Circle(object):
 
 if __name__ == '__main__':
     triangle_tim = Triangle(3, 6, "tim", [], [])
+    print("my name is Tim and I am a Triangle")
     print(triangle_tim.area())
     print(triangle_tim.update_edge_length(12))
     print(triangle_tim.area())
@@ -116,6 +117,7 @@ if __name__ == '__main__':
     print("____________________________________________________________________")
 
     square_marty = Square(5, "marty", [], [])
+    print("my name is Marty and I am a Square")
     print(square_marty.area())
     print(square_marty.update_edge_length(10))
     print(square_marty.area())
@@ -126,6 +128,7 @@ if __name__ == '__main__':
     print("____________________________________________________________________")
 
     circle_carl = Circle(1, 5,  "carl", [], [])
+    print("my name is Carl and I am a Cirlcle")
     print(circle_carl.area())
     print(circle_carl.update_edge_length(10))
     print(circle_carl.area())
