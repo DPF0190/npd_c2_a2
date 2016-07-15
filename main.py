@@ -1,19 +1,16 @@
 import math
 
 '''contains shape classes and does fun things with them
-
 shapes:
 triangle
 square
 circle
-
 data attributes:
 shape_type
 edge_length
 name
 allies
 enemies
-
 methods:
 area
 perimeter
@@ -30,6 +27,7 @@ class Square(object):
         self.allies = allies
         self.enemies = enemies
 
+
     def area(self):
         return self.edge_length**2
 
@@ -38,13 +36,18 @@ class Square(object):
 
     def update_edge_length(self, new_length):
         self.edge_length = new_length
-
+        
     def add_ally(self, shape_object):
         self.allies.append(shape_object)
-
+        return self.allies
+        
     def add_enemy(self, shape_object):
         self.enemies.append(shape_object)
-
+        return self.enemies
+        
+    def shape_type(self, shape):
+        self.shape.append(shape_object)
+        return self.shape
 
 class Triangle(object):
     shape_type = 'Triangle'
@@ -67,10 +70,12 @@ class Triangle(object):
 
     def add_ally(self, shape_object):
         self.allies.append(shape_object)
-
+        return self.allies
+        
     def add_enemy(self, shape_object):
         self.enemies.append(shape_object)
-
+        return self.enemies
+        
 class Circle(object):
     shape_type = 'Circle'
 
@@ -92,10 +97,11 @@ class Circle(object):
 
     def add_ally(self, shape_object):
         self.allies.append(shape_object)
-
+        return self.allies
+        
     def add_enemy(self, shape_object):
         self.enemies.append(shape_object)
-
+        return self.enemies
 
 
 
@@ -104,13 +110,24 @@ if __name__ == '__main__':
     print(triangle_tim.area())
     print(triangle_tim.update_edge_length(12))
     print(triangle_tim.area())
+    print(triangle_tim.add_ally("carl is an ally"))
+    print(triangle_tim.add_enemy("marty is an enemy"))
+
+    print("____________________________________________________________________")
 
     square_marty = Square(5, "marty", [], [])
     print(square_marty.area())
     print(square_marty.update_edge_length(10))
     print(square_marty.area())
+    print(square_marty.add_ally("no allies"))
+
+    
+
+    print("____________________________________________________________________")
 
     circle_carl = Circle(1, 5,  "carl", [], [])
     print(circle_carl.area())
     print(circle_carl.update_edge_length(10))
     print(circle_carl.area())
+    print(circle_carl.add_ally("tim is an ally"))
+    print(circle_carl.add_enemy("marty is an enemy"))
